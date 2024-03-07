@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Sets up an nginx web server for deployment of web_static dir.
+
 apt-get update
 apt-get install -y nginx
 
@@ -28,8 +30,8 @@ printf %s "server {
 
     error_page 404 /404.html;
     location /404 {
-    root /var/www/html;
-    internal;
+      root /var/www/html;
+      internal;
     }
 }" > /etc/nginx/sites-available/default
 
