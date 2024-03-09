@@ -9,8 +9,8 @@ def do_pack():
     """Create a tar gzipped archive"""
     date = datetime.utcnow()
     file_name = "web_static_{}{}{}{}{}{}.tgz"
-    dates = "date.year, date.month, date.day,date.hour,date.minute,date.second"
-    file = f"versions/{file_name}".format()
+    file = f"versions/".format(date.year, date.month,
+                               date.day, date.hour, date.minute, date.second)
     if os.path.isdir("versions") is False:
         if local("mkdir -p versions").failed is True:
             return None
