@@ -3,6 +3,10 @@ from fabric.api import put, run, env
 from os.path import exists
 env.hosts = ['18.204.5.106', '100.26.238.80']
 
+"""
+    Fabric script that distributes an archive to your web servers,
+    """
+
 
 def do_deploy(archive_path):
     """distributes an archive to the web servers"""
