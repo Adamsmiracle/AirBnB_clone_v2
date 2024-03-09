@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from fabric.api import put, run, env
 from os.path import exists
 env.hosts = ['18.204.5.106', '100.26.238.80']
